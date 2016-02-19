@@ -37,6 +37,18 @@ public class PreferencesUtils {
     }
 
     /**
+     * clear all data in current preferences
+     *
+     * @param context
+     */
+    public static void clearData(Context context) {
+        SharedPreferences settings = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.clear();
+        editor.commit();
+    }
+
+    /**
      * put string preferences
      * 
      * @param context
