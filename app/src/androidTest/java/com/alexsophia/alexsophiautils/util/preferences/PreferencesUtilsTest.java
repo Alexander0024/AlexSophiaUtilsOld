@@ -76,14 +76,12 @@ public class PreferencesUtilsTest extends AndroidTestCase {
 
     public void testGetBoolean() throws Exception {
         String key = "testBoolean";
-        boolean value = true;
-        boolean defaultValue = false;
-        boolean getValue = PreferencesUtils.getBoolean(getContext(), key, defaultValue);
-        assertEquals(defaultValue, getValue);
-        boolean result = PreferencesUtils.putBoolean(getContext(), key, value);
+        boolean getValue = PreferencesUtils.getBoolean(getContext(), key, false);
+        assertEquals(false, getValue);
+        boolean result = PreferencesUtils.putBoolean(getContext(), key, true);
         if (result) {
             getValue = PreferencesUtils.getBoolean(getContext(), key);
-            assertEquals(value, getValue);
+            assertEquals(true, getValue);
         } else {
             throw new Exception("Can not put boolean into preferences.");
         }
