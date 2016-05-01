@@ -60,7 +60,7 @@ public class PackageUtils {
     }
 
     /**
-     * App installation location settings values, same to {@link #PackageHelper}
+     * App installation location settings values
      */
     public static final int APP_INSTALL_AUTO     = 0;
     public static final int APP_INSTALL_INTERNAL = 1;
@@ -94,7 +94,7 @@ public class PackageUtils {
     public static boolean installNormal(Context context, String filePath) {
         Intent i = new Intent(Intent.ACTION_VIEW);
         File file = new File(filePath);
-        if (file == null || !file.exists() || !file.isFile() || file.length() <= 0) {
+        if (!file.exists() || !file.isFile() || file.length() <= 0) {
             return false;
         }
 
@@ -486,7 +486,6 @@ public class PackageUtils {
      * can be set by System Menu Setting->Storage->Prefered install location
      * 
      * @return
-     * @see {@link IPackageManager#getInstallLocation()}
      */
     public static int getInstallLocation() {
         CommandResult commandResult = ShellUtils.execCommand(
@@ -642,7 +641,6 @@ public class PackageUtils {
     /**
      * Installation return code<br/>
      * the new package failed because it has specified that it is a test-only package and the caller has not supplied
-     * the {@link #INSTALL_ALLOW_TEST} flag.
      */
     public static final int INSTALL_FAILED_TEST_ONLY                       = -15;
 
