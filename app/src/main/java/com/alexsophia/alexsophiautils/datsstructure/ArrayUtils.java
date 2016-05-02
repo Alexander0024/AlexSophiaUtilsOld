@@ -18,8 +18,6 @@ import com.alexsophia.alexsophiautils.util.ObjectUtils;
  * <li>{@link #getNext(int[], int, int, boolean)}</li>
  * <li>{@link #getNext(long[], long, long, boolean)}</li>
  * </ul>
- * 
- * @author <a href="http://www.trinea.cn" target="_blank">Trinea</a> 2011-10-24
  */
 public class ArrayUtils {
 
@@ -30,12 +28,22 @@ public class ArrayUtils {
     /**
      * is null or its length is 0
      * 
-     * @param <V>
-     * @param sourceArray
-     * @return
+     * @param <V> Object
+     * @param sourceArray data
+     * @return true if the data array is null or is empty; false otherwise.
      */
     public static <V> boolean isEmpty(V[] sourceArray) {
         return (sourceArray == null || sourceArray.length == 0);
+    }
+
+    /**
+     * check if the array is not empty
+     * @param <V> Object
+     * @param sourceArray data
+     * @return true if the data array is not empty; false otherwise.
+     */
+    public static <V> boolean isNotEmpty(V[] sourceArray) {
+        return (null != sourceArray && sourceArray.length != 0);
     }
 
     /**
@@ -48,12 +56,12 @@ public class ArrayUtils {
      * return defaultValue</li>
      * </ul>
      * 
-     * @param <V>
-     * @param sourceArray
+     * @param <V> Object
+     * @param sourceArray data
      * @param value value of target element
      * @param defaultValue default return value
      * @param isCircle whether is circle
-     * @return
+     * @return the last element of the target element.
      */
     public static <V> V getLast(V[] sourceArray, V value, V defaultValue, boolean isCircle) {
         if (isEmpty(sourceArray)) {
@@ -87,12 +95,12 @@ public class ArrayUtils {
      * true, else return defaultValue</li>
      * </ul>
      * 
-     * @param <V>
-     * @param sourceArray
+     * @param <V> Object
+     * @param sourceArray array
      * @param value value of target element
      * @param defaultValue default return value
      * @param isCircle whether is circle
-     * @return
+     * @return the next element of the target element.
      */
     public static <V> V getNext(V[] sourceArray, V value, V defaultValue, boolean isCircle) {
         if (isEmpty(sourceArray)) {

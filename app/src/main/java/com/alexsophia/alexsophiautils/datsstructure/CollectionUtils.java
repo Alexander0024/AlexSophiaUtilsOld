@@ -6,8 +6,6 @@ import java.util.Collection;
 
 /**
  * CollectionUtils
- * 
- * @author <a href="http://www.trinea.cn" target="_blank">Trinea</a> 2012-7-22
  */
 public class CollectionUtils {
 

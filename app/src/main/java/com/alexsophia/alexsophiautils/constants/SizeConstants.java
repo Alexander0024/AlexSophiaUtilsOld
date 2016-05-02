@@ -13,13 +13,13 @@ package com.alexsophia.alexsophiautils.constants;
 
 public final class SizeConstants {
 
-    /** GB to byte **/
+    /** GB to byte 1024*1024*1024 **/
     public static final long GB_2_BYTE = 1073741824;
-    /** MB to byte **/
+    /** MB to byte 1024*1024 **/
     public static final long MB_2_BYTE = 1048576;
-    /** KB to byte **/
+    /** KB to byte 1024 **/
     public static final long KB_2_BYTE = 1024;
-    /** Byte to bit **/
+    /** Byte to bit 8 **/
     public static final long BYTE_2_BIT = 8;
 
     private SizeConstants() {
