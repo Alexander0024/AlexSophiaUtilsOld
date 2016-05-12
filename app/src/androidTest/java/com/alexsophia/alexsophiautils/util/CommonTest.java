@@ -9,6 +9,7 @@ import junit.framework.TestCase;
  * Created by Alexander on 16/5/12.
  */
 public class CommonTest extends TestCase {
+    private String TAG = "TEST";
 
     class Num {
         private int i;
@@ -29,9 +30,9 @@ public class CommonTest extends TestCase {
     public void testReferences() throws Exception {
         Num numA = new Num(5);
         Num numB = new Num(9);
-        Log.e("TEST", "A = " + numA.getI() + "; B = " + numB.getI());
+        Log.e(TAG, "A = " + numA.getI() + "; B = " + numB.getI());
         switchNum(numA, numB);
-        Log.e("TEST", "A = " + numA.getI() + "; B = " + numB.getI());
+        Log.e(TAG, "A = " + numA.getI() + "; B = " + numB.getI());
     }
 
     private void switchNum(Num numA, Num numB) {
