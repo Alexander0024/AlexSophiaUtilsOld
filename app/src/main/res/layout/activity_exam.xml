@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:orientation="vertical">
+
+    <include layout="@layout/common_learn_header"></include>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_88"
+        android:layout_marginLeft="@dimen/h_16"
+        android:layout_marginRight="@dimen/h_16"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_exam_online"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/h_47"
+            android:layout_weight="1"
+            android:background="@drawable/selector_exam_button_left_bg"
+            android:gravity="center"
+            android:text="@string/exam_online"
+            android:textColor="@drawable/selector_exam_button_textcolor"
+            android:textSize="@dimen/size_24"/>
+
+        <Button
+            android:id="@+id/btn_exam_off"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/h_47"
+            android:layout_weight="1"
+            android:background="@drawable/selector_exam_button_right_bg"
+            android:gravity="center"
+            android:text="@string/exam_offline"
+            android:textColor="@drawable/selector_exam_button_textcolor"
+            android:textSize="@dimen/size_24"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/fl_exam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </com.zhy.autolayout.AutoFrameLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

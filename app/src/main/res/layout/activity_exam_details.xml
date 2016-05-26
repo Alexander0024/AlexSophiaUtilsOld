@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/v_header_space"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:background="@color/bg_color"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rll_exam_details_titile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_below="@id/v_header_space"
+        android:background="@color/bg_color">
+
+        <ImageView
+            android:id="@+id/iv_exam_header_back"
+            android:layout_width="@dimen/h_50"
+            android:layout_height="@dimen/h_50"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/h_16"
+            android:src="@mipmap/iconplan_left"
+            />
+
+        <TextView
+            android:id="@+id/tv_exam_header_title"
+            style="@style/titleTextStyle"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_normal"/>
+
+        <ImageView
+            android:id="@+id/iv_exam_header_analysis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/iconplan_12"
+            android:visibility="gone"
+            />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView_exam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rll_exam_details_titile"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="invisible"
+        >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_128"
+                android:layout_marginLeft="@dimen/h_30">
+
+                <ImageView
+                    android:id="@+id/iv_exam_details_icon"
+                    android:layout_width="@dimen/h_58"
+                    android:layout_height="@dimen/h_58"
+                    android:layout_centerVertical="true"
+                    />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/h_30"
+                    android:layout_toRightOf="@id/iv_exam_details_icon"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/h_10"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_exam_details_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/tv_black"
+                        android:textSize="@dimen/size_28"/>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/h_2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/hint_text"
+                            android:textSize="@dimen/size_24"/>
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_total_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/size_24"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/h_2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/size_24"/>
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_used_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:layout_toRightOf="@id/tv_exam_details_state"
+                            android:textColor="@color/hint_text"
+                            android:textSize="@dimen/size_24"/>
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="20px"
+                            android:layout_marginRight="@dimen/h_30"
+                            android:textColor="@color/hint_text"
+                            android:visibility="invisible"
+                            android:textSize="@dimen/size_24"/>
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_200"
+                android:background="@color/bg_list"
+                android:orientation="horizontal">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/h_30"
+                        android:layout_marginTop="@dimen/h_56"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kg_score"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/size_24"/>
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_kgt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/unKnow_red"
+                            android:textSize="@dimen/size_34"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" /"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/size_24"/>
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_kgt_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/size_24"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/ll_exam_details_zgt_mark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/h_30"
+                        android:layout_marginTop="@dimen/h_10"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zg_score"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/size_24"/>
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_zgt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/unKnow_red"
+                            android:textSize="@dimen/size_34"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" /"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/size_24"/>
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_zgt_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/size_24"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/ll_exam_details_zgt_commite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/h_30"
+                        android:layout_marginTop="@dimen/h_10"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zg_total"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/size_24"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_zg_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/size_24"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_exam_details_zg_mark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/h_30"
+                        android:text="@string/zg_mark"
+                        android:textColor="@color/hint_text"
+                        android:textSize="@dimen/size_24"
+                        android:visibility="gone"
+                        />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/rll_exam_details_mark"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="invisible"
+                    >
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/ll_exam_rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="班级排名"
+                            android:textColor="@color/hint_text"
+                            android:textSize="20px"/>
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/h_10"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_exam_details_class_rank"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/hint_text"
+                                android:textSize="@dimen/size_34"/>
+
+                            <TextView
+                                android:id="@+id/tv_exam_details_class_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/hint_text"
+                                android:textSize="20px"/>
+                        </com.zhy.autolayout.AutoLinearLayout>
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="@dimen/h_128"
+                        android:layout_height="@dimen/h_128"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/h_30"
+                        android:layout_toRightOf="@id/ll_exam_rank"
+                        android:background="@drawable/shape_exam_circle"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_exam_details_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/unKnow_red"
+                            android:textSize="@dimen/size_34"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/tv_exam_details_score"
+                            android:layout_toRightOf="@id/tv_exam_details_score"
+                            android:gravity="center"
+                            android:text="@string/score1"
+                            android:textColor="@color/unKnow_red"
+                            android:textSize="@dimen/h_30"/>
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.lirenkj.educationforparent.share.views.ListViewForScrollView
+                android:id="@+id/lv_exam_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_16"
+                android:divider="@null"
+                android:dividerHeight="@dimen/h_32"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none"
+                android:paddingBottom="@dimen/h_88"
+                ></com.lirenkj.educationforparent.share.views.ListViewForScrollView>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/common_parsing"></include>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

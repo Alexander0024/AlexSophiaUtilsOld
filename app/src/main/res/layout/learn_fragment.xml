@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:round="http://schemas.android.com/apk/res-auto"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <include layout="@layout/common_header"></include>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_200"
+        android:background="@mipmap/bg_learn"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.lirenkj.educationforparent.share.views.RoundedImageView
+            android:id="@+id/iv_learn_head"
+            android:layout_width="58px"
+            android:layout_height="58px"
+            android:layout_marginTop="10px"
+            android:src="@mipmap/public_imges_128px"
+            round:riv_oval="true"/>
+
+        <TextView
+            android:id="@+id/tv_learn_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h_26"
+            android:text="李晓明"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/size_28"/>
+
+        <TextView
+            android:id="@+id/tv_learn_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26px"
+            android:text="西安立人科技小学  五年级(3)班"
+            android:textColor="@color/tv_green"
+            android:textSize="@dimen/size_24"
+
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hint_text_lighter"/>
+    <!--<GridView-->
+    <!--android:id="@+id/gv_learn"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:columnWidth="100px"-->
+    <!--android:verticalSpacing="76px"-->
+    <!--android:horizontalSpacing="100px"-->
+    <!--android:layout_marginLeft="40px"-->
+    <!--android:layout_marginRight="40px"-->
+    <!--android:layout_marginTop="40px"-->
+    <!--android:numColumns="3"-->
+    <!--android:listSelector="#00000000"-->
+    <!--android:scrollbars="none"-->
+    <!-->-->
+    <!--</GridView>-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginTop="40px"
+
+        >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="@dimen/h_120"
+                android:layout_height="@dimen/h_120">
+
+                <ImageView
+                    android:id="@+id/iv_homework"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/mission01"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_homework_num"
+                    style="@style/learn_read_num"
+                    />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_18"
+                android:text="@string/home_work"
+                android:textColor="@color/title_unread"
+                android:textSize="@dimen/size_28"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="@dimen/h_120"
+                android:layout_height="@dimen/h_120"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/mission02"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_preview_num"
+                    style="@style/learn_read_num"
+                    />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_18"
+                android:text="@string/preview"
+                android:textColor="@color/title_unread"
+                android:textSize="@dimen/size_28"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="@dimen/h_120"
+                android:layout_height="@dimen/h_120">
+
+                <ImageView
+                    android:id="@+id/iv_exam"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/mission03"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_exam_num"
+                    style="@style/learn_read_num"
+                    />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_18"
+                android:text="@string/exam"
+                android:textColor="@color/title_unread"
+                android:textSize="@dimen/size_28"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginTop="40px"
+        >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="@dimen/h_120"
+                android:layout_height="@dimen/h_120">
+
+                <ImageView
+                    android:id="@+id/iv_practice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/mission04"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_practice_num"
+                    style="@style/learn_read_num"
+                    />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_18"
+                android:text="@string/practice"
+                android:textColor="@color/title_unread"
+                android:textSize="@dimen/size_28"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="@dimen/h_120"
+                android:layout_height="@dimen/h_120">
+
+                <ImageView
+                    android:id="@+id/iv_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/mission05"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_test_num"
+                    style="@style/learn_read_num"
+                    />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_18"
+                android:text="@string/test"
+                android:textColor="@color/title_unread"
+                android:textSize="@dimen/size_28"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="@dimen/h_120"
+                android:layout_height="@dimen/h_120">
+
+                <ImageView
+                    android:id="@+id/iv_error_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/mission06"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_error_book_num"
+                    style="@style/learn_read_num"
+                    />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_18"
+                android:text="@string/error_book"
+                android:textColor="@color/title_unread"
+                android:textSize="@dimen/size_28"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

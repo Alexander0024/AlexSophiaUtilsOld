@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/pageStyle.white"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/rv_headerBar"
+        layout="@layout/common_header"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/lv_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/send_contact_tab_height"
+        android:layout_below="@id/rv_headerBar"
+        android:background="@color/bg_color"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_margin_left"
+        android:paddingRight="@dimen/common_margin_right">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h_58"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/select_left"
+                style="@style/tabItemStyle"
+                android:background="@drawable/news_contact_list_left"
+                android:text="@string/teacher"/>
+
+            <TextView
+                android:id="@+id/select_mid"
+                style="@style/tabItemStyle"
+                android:background="@drawable/news_contact_list_middle"
+                android:text="@string/student"/>
+
+            <TextView
+                android:id="@+id/select_right"
+                style="@style/tabItemStyle"
+                android:background="@drawable/news_contact_list_right"
+                android:text="@string/parent"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/lv_tab">
+
+        <ListView
+            android:id="@+id/lVi_contacts"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"/>
+
+        <com.lirenkj.educationforparent.extra.lettersort.SideBar
+            android:id="@+id/sidebar"
+            android:layout_width="@dimen/h_30"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center"/>
+    </com.zhy.autolayout.AutoFrameLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

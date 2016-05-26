@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:round="http://schemas.android.com/apk/res-auto"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:background="@color/white"
+                                     android:orientation="vertical"
+    >
+
+    <include layout="@layout/common_learn_header"></include>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_179"
+        android:background="@color/bg_color">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/h_58"
+            android:layout_marginRight="@dimen/h_58"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_error_semester"
+                style="@style/error_tab_bg_ll_style">
+
+                <ImageView
+                    android:id="@+id/iv_error_semester"
+                    android:layout_width="@dimen/h_70"
+                    android:layout_height="@dimen/h_70"/>
+
+                <TextView
+                    android:id="@+id/tv_error_semester"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h_10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/semester"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/h_20"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_error_month"
+                style="@style/error_tab_bg_ll_style"
+                android:layout_marginLeft="@dimen/h_80">
+
+                <ImageView
+                    android:id="@+id/iv_error_month"
+                    android:layout_width="@dimen/h_70"
+                    android:layout_height="@dimen/h_70"/>
+
+                <TextView
+                    android:id="@+id/tv_error_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h_10"
+                    android:text="@string/month"
+                    android:textColor="@color/error_selector"
+                    android:textSize="@dimen/h_20"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_error_week"
+                style="@style/error_tab_bg_ll_style"
+                android:layout_marginLeft="@dimen/h_80">
+
+                <ImageView
+                    android:id="@+id/iv_error_week"
+                    android:layout_width="@dimen/h_70"
+                    android:layout_height="@dimen/h_70"/>
+
+                <TextView
+                    android:id="@+id/tv_error_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h_10"
+                    android:text="@string/week"
+                    android:textColor="@color/error_selector"
+                    android:textSize="@dimen/h_20"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_error_today"
+                style="@style/error_tab_bg_ll_style"
+                android:layout_marginLeft="@dimen/h_80">
+
+                <ImageView
+                    android:id="@+id/iv_error_today"
+                    android:layout_width="@dimen/h_70"
+                    android:layout_height="@dimen/h_70"/>
+
+                <TextView
+                    android:id="@+id/tv_error_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h_10"
+                    android:text="@string/today"
+                    android:textColor="@color/error_selector"
+                    android:textSize="@dimen/h_20"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="105px"
+        android:background="@mipmap/bg_wrong"
+        >
+
+        <com.lirenkj.educationforparent.share.views.RoundedImageView
+            android:id="@+id/iv_error_head"
+            android:layout_width="58px"
+            android:layout_height="58px"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/public_imges_128px"
+            round:riv_oval="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_error_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/h_16"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/size_30"
+            />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_60"
+        android:layout_marginTop="@dimen/h_56"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size_30"
+        android:paddingRight="@dimen/size_30"
+        >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/h_60"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today_error"
+                android:textColor="@color/hint_text"
+                android:textSize="@dimen/h_20"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_error_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_10"
+                android:text="0"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/size_24"
+                />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/h_60"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other_error"
+                android:textColor="@color/hint_text"
+                android:textSize="@dimen/h_20"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_error_over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_10"
+                android:text="0"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/size_24"
+                />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/h_60"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/right_error"
+                android:textColor="@color/hint_text"
+                android:textSize="@dimen/h_20"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_error_remake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_10"
+                android:text="0"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/size_24"
+                />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.lirenkj.educationforparent.share.views.zlistview.widget.ZListView
+        android:id="@+id/lv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_30"
+        android:listSelector="@android:color/transparent"
+        ></com.lirenkj.educationforparent.share.views.zlistview.widget.ZListView>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

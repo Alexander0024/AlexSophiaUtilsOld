@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/pageStyle.grey"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/rv_headerBar"
+        layout="@layout/common_header"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_headerBar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_account_info"
+            style="@style/textViewStyle"
+            android:layout_marginTop="@dimen/common_margin_top"/>
+
+        <TextView
+            android:id="@+id/tv_check_code_hint"
+            style="@style/textViewStyle"
+            android:layout_marginTop="@dimen/common_margin_large"/>
+
+        <EditText
+            android:id="@+id/edtTxt_authcode"
+            style="@style/editTextStyle.authcode"
+            android:layout_marginTop="@dimen/common_margin_less"
+            android:hint="@string/bind_authcode_hint"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/buttonStyle"
+            android:layout_marginTop="@dimen/common_margin_large"
+            android:text="@string/findPSW_submit"/>
+
+        <TextView
+            style="@style/textViewStyle.center"
+            android:layout_marginTop="@dimen/common_margin_large"
+            android:text="@string/findPSW_no_receive_authcode"/>
+
+        <Button
+            android:id="@+id/btn_resend_authcode"
+            style="@style/buttonStyleCenterWhite"
+            android:layout_marginTop="@dimen/common_margin_large"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

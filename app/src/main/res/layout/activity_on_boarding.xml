@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/pageStyle.green"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/iv_boarding_logo"
+        android:layout_width="@dimen/h_179"
+        android:layout_height="@dimen/h_179"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/h_179"
+        android:src="@mipmap/app_logo_144_3x"/>
+
+    <ImageView
+        android:id="@+id/iv_boarding_banner"
+        android:layout_width="@dimen/h_380"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_boarding_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/h_60"
+        android:src="@mipmap/index_text"/>
+
+    <ImageView
+        android:id="@+id/iv_boarding_bottom"
+        android:layout_width="@dimen/h_179"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/h_32"
+        android:src="@mipmap/copyright"/>
+</com.zhy.autolayout.AutoRelativeLayout>

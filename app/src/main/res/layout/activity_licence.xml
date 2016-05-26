@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/pageStyle.white"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/rv_headerBar"
+        layout="@layout/common_header"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        style="@style/contentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_headerBar">
+
+        <WebView
+            android:id="@+id/wv_licence_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

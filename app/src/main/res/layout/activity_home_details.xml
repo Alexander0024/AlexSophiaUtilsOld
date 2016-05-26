@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+    >
+
+    <include
+        android:id="@+id/rl_common_header"
+        layout="@layout/common_header"></include>
+
+    <ScrollView
+        android:id="@+id/scrollView_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_common_header"
+        android:paddingBottom="@dimen/h_88"
+        android:scrollbars="none"
+        android:background="@color/white"
+        android:visibility="invisible"
+        >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/h_30"
+            >
+            <include layout="@layout/item_homedetails_item"></include>
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_black_alpha"
+                android:paddingLeft="@dimen/h_30"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/tv_home_details_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_16"
+                android:paddingLeft="@dimen/h_30"
+                android:textColor="@color/tv_green"
+                android:text="@string/witch_section"
+                android:textSize="20px"/>
+
+            <TextView
+                android:id="@+id/tv_home_details_section_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_10"
+                android:paddingLeft="@dimen/h_30"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/size_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/h_16"
+                android:paddingLeft="@dimen/h_30"
+                android:background="@color/line_black_alpha"></TextView>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_home_details_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_home_details_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h_16"
+                    android:textColor="@color/tv_green"
+                    android:textSize="20px"
+                    android:paddingLeft="@dimen/h_30"
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/h_30"
+                    android:background="@drawable/selector_common_bg"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_home_details_preview_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/h_10"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/tv_black"
+                        android:textSize="@dimen/size_24"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageView
+                        style="@style/rightArrowStyle"
+                        android:layout_alignParentRight="true"
+                        />
+                </RelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/h_16"
+                android:background="@color/line_black_alpha"></TextView>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_attachment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_80"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tv_home_details_annex"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/bg_color"
+                    android:textSize="@dimen/size_28"/>
+
+                <TextView
+                    android:id="@+id/tv_attachment_line"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_black_alpha"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_web"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/bg_color"
+                    android:textSize="@dimen/size_28"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:id="@+id/tv_attachment_below"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_black_alpha"
+                android:visibility="gone"
+                ></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_50"
+                android:background="@color/bg_list"/>
+
+            <TextView
+                android:id="@+id/tv_home_details_prehome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_16"
+                android:textColor="@color/tv_green"
+                android:layout_marginLeft="@dimen/h_30"
+                android:textSize="20px"/>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_12"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/h_30"
+                >
+
+                <TextView
+                    android:id="@+id/tv_home_details_totalnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_used_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_home_details_kg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_12"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/h_30"
+                >
+
+                <TextView
+                    android:id="@+id/tv_home_details_kg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kg_question_m"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/right"
+                    android:textColor="@color/learn_right"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_kg_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wrong"
+                    android:textColor="@color/learn_wrong"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_kg_wrong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_home_details_zg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_12"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/h_30"
+                >
+
+                <TextView
+                    android:id="@+id/tv_home_details_zg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zg_question_m"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_zg_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answered"
+                    android:textColor="@color/learn_answered"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_zg_first_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_zg_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_answered"
+                    android:textColor="@color/learn_no_answer"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_zg_second_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_zg_third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_correct"
+                    android:textColor="@color/tv_green"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_zg_third_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_zg_forth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_correct"
+                    android:textColor="@color/tv_green"
+                    android:textSize="@dimen/size_24"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_zg_forth_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.lirenkj.educationforparent.share.views.ListViewForScrollView
+                android:id="@+id/lv_home_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_16"
+                android:divider="@null"
+                android:dividerHeight="@dimen/h_32"
+                android:scrollbars="none"
+                android:listSelector="@android:color/transparent"
+                ></com.lirenkj.educationforparent.share.views.ListViewForScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_50"
+                android:layout_marginTop="@dimen/h_16"
+                android:background="@color/bg_list"/>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/ll_home_details_attachment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_90"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/h_30"
+                android:visibility="gone"
+                android:background="@drawable/selector_common_bg"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/home_attachment"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"
+                    />
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    style="@style/rightArrowStyle"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                        android:id="@+id/tv_home_details_attachment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/hint_text_lighter"
+                        android:textSize="@dimen/size_24"
+                        android:layout_toLeftOf="@id/iv_arrow"
+                        />
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_stuattachment_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_50"
+                android:background="@color/bg_list"
+                android:visibility="gone"
+                />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_home_details_feedbook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_line"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/h_30"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h_16"
+                    android:text="@string/home_feedback"
+                    android:textColor="@color/tv_green"
+                    android:textSize="20px"/>
+
+                <TextView
+                    android:id="@+id/tv_home_details_feedback_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h_12"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/size_24"
+                    />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_home_details_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/h_30"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h_16"
+                    android:text="@string/home_review"
+                    android:textColor="@color/tv_green"
+                    android:textSize="20px"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/h_12"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_home_details_comment_teacher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/tv_black"
+                        android:textSize="@dimen/size_24"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_home_details_comment_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/unKnow_red"
+                        android:textSize="@dimen/size_24"
+                        />
+                </LinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:id="@+id/last_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_50"
+                android:layout_marginTop="@dimen/h_16"
+                android:background="@color/bg_list"
+                android:visibility="gone"
+                />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/common_parsing"></include>
+
+</com.zhy.autolayout.AutoRelativeLayout>

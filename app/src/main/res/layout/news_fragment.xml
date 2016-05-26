@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/pageStyle.white"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@+id/v_top_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_40"
+        android:background="@color/bg_color"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_top_header">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_header_normal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:background="@color/bg_color">
+
+            <TextView
+                android:id="@+id/tv_header_title"
+                style="@style/titleTextStyle"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="@dimen/h_40"
+                android:paddingRight="@dimen/h_40"
+                android:text="@string/news_title"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_menu_bar"
+                android:layout_width="@dimen/title_bar_height"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="@dimen/news_title_btn_size"
+                    android:layout_height="@dimen/news_title_btn_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/btn_padding"
+                    android:src="@mipmap/iconplan_13"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_send_message"
+                android:layout_width="@dimen/title_bar_height"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="@dimen/news_title_btn_size"
+                    android:layout_height="@dimen/news_title_btn_size"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/btn_padding"
+                    android:src="@mipmap/iconplan_18"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_search"
+                android:layout_width="@dimen/title_bar_height"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/h_88">
+
+                <ImageView
+                    android:layout_width="@dimen/news_title_btn_size"
+                    android:layout_height="@dimen/news_title_btn_size"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/iconplan_17"/>
+            </RelativeLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_header_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:background="@color/bg_color">
+
+            <TextView
+                android:id="@+id/tv_search_cancel"
+                android:layout_width="@dimen/h_112"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/btn_wrapper"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <com.lirenkj.educationforparent.share.views.SearchEditTextView
+                android:id="@+id/edtTxt_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_title_search_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/btn_wrapper"
+                android:layout_marginRight="@dimen/btn_wrapper"
+                android:layout_toLeftOf="@id/tv_search_cancel"
+                android:background="@drawable/news_search_edittext_shape"
+                android:drawableLeft="@mipmap/iconplan_29"
+                android:drawableRight="@mipmap/iconplan_30"
+                android:hint="@string/news_search"
+                android:imeOptions="actionSearch"
+                android:maxLength="120"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_header">
+
+        <com.lirenkj.educationforparent.share.views.zlistview.widget.ZListView
+            android:id="@+id/lVi_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/transparent"
+            android:visibility="gone">
+        </com.lirenkj.educationforparent.share.views.zlistview.widget.ZListView>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_blank_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_list"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/news_empty"
+                android:textColor="@color/bg_color"
+                android:textSize="@dimen/text_size_normal"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_loading_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_list">
+
+            <com.ant.liao.GifView
+                android:id="@+id/gif_news_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoFrameLayout>
+
+    <View
+        android:id="@+id/rl_cover_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+    </View>
+</com.zhy.autolayout.AutoRelativeLayout>

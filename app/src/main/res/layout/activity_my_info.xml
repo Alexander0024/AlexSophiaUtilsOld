@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    android:id="@+id/rl_my_info"
+    style="@style/pageStyle.white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:round="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/rv_headerBar"
+        layout="@layout/common_header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_headerBar">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 用户头像 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/lv_user_avatar"
+                style="@style/aboutItemStyle"
+                android:layout_height="@dimen/info_avatar_height"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/myInfoTxtStyle"
+                    android:text="@string/info_avatar"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right">
+
+                    <com.lirenkj.educationforparent.share.views.RoundedImageView
+                        android:id="@+id/iv_user_avatar"
+                        android:layout_width="@dimen/info_avatar_size"
+                        android:layout_height="@dimen/info_avatar_size"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/public_imges_128px"
+                        round:riv_oval="true"/>
+
+                    <ImageView
+                        style="@style/rightArrowStyle"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/splitLineStyle"/>
+
+            <!-- 用户姓名 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                style="@style/aboutItemStyle"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/myInfoTxtStyle"
+                    android:text="@string/info_name"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/common_margin_less">
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        style="@style/baseItemTxtStyle"
+                        android:paddingRight="@dimen/common_margin_right"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/splitLineStyle"/>
+
+            <!-- 账号 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                style="@style/aboutItemStyle"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/myInfoTxtStyle"
+                    android:text="@string/info_account"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/common_margin_less">
+
+                    <TextView
+                        android:id="@+id/tv_user_account"
+                        style="@style/baseItemTxtStyle"
+                        android:paddingRight="@dimen/common_margin_right"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/splitLineStyle"/>
+
+            <!-- 联系电话 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/lv_user_tel"
+                style="@style/aboutItemStyle"
+                android:background="@drawable/selector_common_bg"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/myInfoTxtStyle"
+                    android:text="@string/info_tel"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/common_margin_less">
+
+                    <TextView
+                        android:id="@+id/tv_user_tel"
+                        style="@style/baseItemTxtStyle"
+                        android:gravity="right"
+                        android:hint="@string/info_tel_hint"
+                        android:textColorHint="@color/hint_text"/>
+
+                    <ImageView
+                        style="@style/rightArrowStyle"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/splitLineStyle"/>
+
+            <!-- 电子邮箱 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/lv_user_mail"
+                style="@style/aboutItemStyle"
+                android:background="@drawable/selector_common_bg"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/myInfoTxtStyle"
+                    android:text="@string/info_mail"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/common_margin_less">
+
+                    <TextView
+                        android:id="@+id/tv_user_mail"
+                        style="@style/baseItemTxtStyle"
+                        android:gravity="right"
+                        android:hint="@string/info_mail_hint"
+                        android:textColorHint="@color/hint_text"/>
+
+                    <ImageView
+                        style="@style/rightArrowStyle"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/splitLineStyle"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/info_split_height"/>
+
+            <!-- 学生头像 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                style="@style/aboutItemStyle"
+                android:layout_height="@dimen/info_stu_avatar_height"
+                android:paddingRight="0px">
+
+                <com.lirenkj.educationforparent.share.views.RoundedImageView
+                    android:id="@+id/iv_stu_avatar"
+                    android:layout_width="@dimen/info_stu_avatar_size"
+                    android:layout_height="@dimen/info_stu_avatar_size"
+                    android:src="@mipmap/public_imges_128px"
+                    round:riv_oval="true"/>
+
+                <TextView
+                    android:id="@+id/tv_stu_name"
+                    style="@style/myInfoTxtStyle"
+                    android:paddingLeft="@dimen/common_margin_normal"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/splitLineStyle"/>
+
+            <!-- 所在学校 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                style="@style/aboutItemStyle"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/myInfoTxtStyle"
+                    android:text="@string/info_locate_school"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/common_margin_less">
+
+                    <TextView
+                        android:id="@+id/tv_stu_school"
+                        style="@style/baseItemTxtStyle"
+                        android:paddingRight="@dimen/common_margin_right"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/splitLineStyle"/>
+
+            <!-- 所在班级 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                style="@style/aboutItemStyle"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/myInfoTxtStyle"
+                    android:text="@string/info_locate_class"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/common_margin_less">
+
+                    <TextView
+                        android:id="@+id/tv_stu_class"
+                        style="@style/baseItemTxtStyle"
+                        android:paddingRight="@dimen/common_margin_right"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/splitLineStyle"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+</com.zhy.autolayout.AutoRelativeLayout>

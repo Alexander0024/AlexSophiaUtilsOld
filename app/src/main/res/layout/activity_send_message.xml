@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/pageStyle.white"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/rv_headerBar"
+        layout="@layout/common_header"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_headerBar"
+        android:layout_marginLeft="@dimen/border_margin"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/border_margin">
+
+            <TextView
+                android:id="@+id/tv_send_new_receiver"
+                style="@style/myInfoTxtStyle"
+                android:layout_centerVertical="true"
+                android:text="@string/news_new_receiver"
+                android:textColor="@color/grey_hint_title"/>
+
+            <TextView
+                android:id="@+id/tv_receivers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_margin_large"
+                android:layout_toRightOf="@id/tv_send_new_receiver"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/text_size_item"/>
+
+            <ImageView
+                android:id="@+id/iv_add_receivers"
+                android:layout_width="@dimen/add_new_icon_size"
+                android:layout_height="@dimen/add_new_icon_size"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/add"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/bg_color"/>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/border_margin">
+
+            <TextView
+                style="@style/myInfoTxtStyle"
+                android:text="@string/news_new_title"
+                android:textColor="@color/grey_hint_title"/>
+
+            <EditText
+                android:id="@+id/edtTxt_message_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:maxLength="120"
+                android:singleLine="true"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/text_size_item"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/bg_color"/>
+
+        <EditText
+            android:id="@+id/edtTxt_message_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/border_margin"
+            android:layout_marginRight="@dimen/border_margin"
+            android:layout_marginTop="@dimen/border_margin"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/news_new_content_hint"
+            android:maxLength="400"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

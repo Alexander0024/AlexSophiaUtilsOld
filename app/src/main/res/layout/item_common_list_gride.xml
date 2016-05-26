@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:orientation="vertical"
+                                     android:paddingLeft="@dimen/h_30"
+    >
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/h_30"
+        >
+
+        <TextView
+            android:id="@+id/item_common_list_question_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/attachment_topic"
+            android:textSize="@dimen/size_24"
+            />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/ll_comm_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_comment_topic"
+                android:textColor="@color/attachment_topic"
+                android:textSize="@dimen/size_24"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_comm_mark_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textColor="@color/unKnow_red"
+                android:textSize="@dimen/size_24"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_comm_mark_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/20分"
+                android:textColor="@color/attachment_topic"
+                android:textSize="@dimen/size_24"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/ll_comm_commited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_comment_topic1"
+                android:textColor="@color/attachment_topic"
+                android:textSize="@dimen/size_24"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_comm_commite_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20分"
+                android:textColor="@color/attachment_topic"
+                android:textSize="@dimen/size_24"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <com.lirenkj.educationforparent.share.views.GrideViewForScrollView
+        android:id="@+id/gv_home_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/h_30"
+        android:layout_marginTop="@dimen/h_32"
+        android:horizontalSpacing="@dimen/h_60"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="5"
+        android:paddingRight="@dimen/h_30"
+        android:paddingBottom="@dimen/h_20"
+        android:verticalSpacing="@dimen/h_32"
+        ></com.lirenkj.educationforparent.share.views.GrideViewForScrollView>
+
+</com.zhy.autolayout.AutoLinearLayout>

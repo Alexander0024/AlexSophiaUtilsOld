@@ -1,4 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="normal_text">25sp</dimen>
+    <dimen name="h_1">1px</dimen>
+    <dimen name="h_16">16px</dimen>
+    <dimen name="h_18">18px</dimen>
+    <dimen name="size_24">24px</dimen>
+    <dimen name="size_28">28px</dimen>
+    <dimen name="size_30">30px</dimen>
+    <dimen name="size_34">34px</dimen>
+    <dimen name="size_20">20px</dimen>
+    <dimen name="size_48">48px</dimen>
+    <dimen name="size_60">60px</dimen>
+    <dimen name="menu_item_height">112px</dimen>
+    <dimen name="menu_img_width">128px</dimen>
+    <dimen name="h_112">112px</dimen>
+    <dimen name="h_50">50px</dimen>
+    <dimen name="h_52">52px</dimen>
+    <dimen name="h_40">40px</dimen>
+    <dimen name="h_60">60px</dimen>
+    <dimen name="h_96">96px</dimen>
+    <dimen name="h_64">64px</dimen>
+    <dimen name="h_28">28px</dimen>
+    <dimen name="h_26">26px</dimen>
+    <dimen name="h_24">24px</dimen>
+    <dimen name="h_72">72px</dimen>
+    <dimen name="h_100">100px</dimen>
+    <dimen name="h_120">120px</dimen>
+    <dimen name="h_36">36px</dimen>
+    <dimen name="h_200">200px</dimen>
+    <dimen name="h_30">30px</dimen>
+    <dimen name="h_58">58px</dimen>
+    <dimen name="h_128">128px</dimen>
+    <dimen name="h_10">10px</dimen>
+    <dimen name="h_4">4px</dimen>
+    <dimen name="h_5">5px</dimen>
+    <dimen name="h_2">2px</dimen>
+    <dimen name="h_80">80px</dimen>
+    <dimen name="h_12">12px</dimen>
+    <dimen name="h_32">32px</dimen>
+    <dimen name="h_88">88px</dimen>
+    <dimen name="h_65">65px</dimen>
+    <dimen name="h_20">20px</dimen>
+    <dimen name="h_47">47px</dimen>
+    <dimen name="h_56">56px</dimen>
+    <dimen name="h_25">25px</dimen>
+    <dimen name="h_70">70px</dimen>
+    <dimen name="h_14">14px</dimen>
+    <dimen name="h_280">280px</dimen>
+    <dimen name="h_380">380px</dimen>
+    <dimen name="h_179">179px</dimen>
+    <dimen name="h_90">90px</dimen>
+    <dimen name="h_114">114px</dimen>
+    <dimen name="h_118">118px</dimen>
+    <dimen name="h_140">140px</dimen>
+    <dimen name="title_bar_height">88px</dimen>
+    <dimen name="avatar_size">128px</dimen>
+
+    <!-- TextView Attributes -->
+    <dimen name="tv_height">90px</dimen>
+    <dimen name="edt_height">60px</dimen>
+
+    <!-- Button Attributes -->
+    <dimen name="btn_height">88px</dimen>
+    <dimen name="btn_wrapper">16px</dimen>
+    <dimen name="btn_height_small">68px</dimen>
+    <dimen name="btn_padding">20px</dimen>
+
+    <!-- RadioButton Attributes -->
+    <dimen name="chk_size">30px</dimen>
+
+    <!-- Dropdown Arrow -->
+    <dimen name="dropdown_arrow_size">30px</dimen>
+
+    <!-- About Page -->
+    <dimen name="margin_top">98px</dimen>
+    <dimen name="margin_wrapper">120px</dimen>
+    <dimen name="margin_smaller">20px</dimen>
+    <dimen name="ico_size">144px</dimen>
+
+    <!-- Setting Page -->
+    <dimen name="right_arrow_size">60px</dimen>
+    <dimen name="item_height">88px</dimen>
+    <dimen name="toggle_width">102px</dimen>
+    <dimen name="toggle_height">62px</dimen>
+    <dimen name="loading_size">50px</dimen>
+
+    <!-- Update Page -->
+    <dimen name="update_margin_top">46px</dimen>
+    <dimen name="update_margin_inner">20px</dimen>
+
+    <!-- My Info Page -->
+    <dimen name="info_avatar_size">120px</dimen>
+    <dimen name="info_avatar_height">180px</dimen>
+    <dimen name="info_stu_avatar_size">58px</dimen>
+    <dimen name="info_stu_avatar_height">86px</dimen> <!-- 164 - 78 = 86px -->
+    <dimen name="info_split_height">78px</dimen>
+    <dimen name="info_line_margin">1px</dimen>
+    <dimen name="info_lock_size">44px</dimen>
+
+    <!-- statistics Page -->
+    <dimen name="statistics_title_height">200px</dimen>
+    <dimen name="statistics_avatar_size">58px</dimen>
+    <dimen name="statistics_avatar_margin_top">54px</dimen>
+    <dimen name="statistics_text_margin_top">126px</dimen>
+
+    <!-- Notice Page -->
+    <dimen name="news_title_btn_size">50px</dimen>
+    <dimen name="news_title_search_height">56px</dimen>
+    <dimen name="notice_margin_top">26px</dimen>
+    <dimen name="notice_margin_small">20px</dimen>
+    <dimen name="notice_margin_message">90px</dimen>
+    <dimen name="add_new_icon_size">44px</dimen>
+    <dimen name="send_contact_tab_height">82px</dimen>
+    <dimen name="send_contact_split_height">45px</dimen>
+
+    <!-- Margins -->
+    <dimen name="border_margin">30px</dimen>
+    <dimen name="common_margin_left">30px</dimen>
+    <dimen name="common_margin_right">30px</dimen>
+    <dimen name="common_margin_top">70px</dimen>
+    <dimen name="common_margin_inner_items">1px</dimen>
+    <dimen name="common_margin_less">12px</dimen>
+    <dimen name="common_margin_normal">24px</dimen>
+    <dimen name="common_margin_between_items">36px</dimen>
+    <dimen name="common_margin_large">50px</dimen>
+
+    <!-- Text Size -->
+    <dimen name="text_size_normal">34px</dimen>
+    <dimen name="text_size_content">28px</dimen>
+    <dimen name="text_size_item">30px</dimen>
+    <dimen name="text_size_small">24px</dimen>
+    <dimen name="text_size_small_hint">20px</dimen>
+
+    <!-- Custom Dialog -->
+    <dimen name="dialog_wrapper">50px</dimen>
+    <dimen name="dialog_title_height">88px</dimen>
+    <dimen name="dialog_button_height">78px</dimen>
 </resources>
