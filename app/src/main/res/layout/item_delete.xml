@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout android:id="@+id/item_delete"
+                                     xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="@dimen/h_179"
+                                     android:layout_height="@dimen/h_128"
+                                     android:background="@android:color/holo_red_light"
+                                     android:gravity="center"
+                                     android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:textColor="@color/white"/>
+</com.zhy.autolayout.AutoLinearLayout>

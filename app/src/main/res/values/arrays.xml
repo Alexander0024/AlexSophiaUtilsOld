@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="level_text_array">
+        <item>@string/high_pie_label_text</item>
+        <item>@string/high_nomal_pie_label_text</item>
+        <item>@string/nomal_pie_label_text</item>
+        <item>@string/low_pie_label_text</item>
+    </integer-array>
+	<integer-array name="level_color_array">
+	    <item>@color/high_pie_color</item>
+	    <item>@color/high_nomal_pie_color</item>
+	    <item>@color/nomal_pie_color</item>
+	    <item>@color/low_pie_color</item>
+	</integer-array>
+    <integer-array name="score_level_text_array">
+        <item>@string/level_hight</item>
+        <item>@string/level_good</item>
+        <item>@string/level_middel</item>
+        <item>@string/level_low</item>
+    </integer-array>
+    <integer-array name="level_score_text_array">
+        <item>@string/level_hight_score</item>
+        <item>@string/level_good_score</item>
+        <item>@string/level_middel_score</item>
+        <item>@string/level_low_score</item>
+    </integer-array>
+</resources>

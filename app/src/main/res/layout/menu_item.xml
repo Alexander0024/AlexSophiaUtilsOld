@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/Menu_rl_style"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_name_menu_item"
+        android:paddingLeft="@dimen/h_50"
+        style="@style/Menu_textView_style"
+        android:text="@string/about_text"/>
+
+    <ImageView
+        android:id="@+id/iv_menu_item"
+        android:paddingRight="@dimen/h_40"
+        style="@style/Menu_image_style"/>
+
+    <TextView
+        android:id="@+id/tv_menu_version_item"
+        style="@style/Menu_item_version_style"
+        android:layout_toLeftOf="@id/iv_menu_item"
+        android:visibility="visible"/>
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -3,4 +3,81 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="menu_bg_color">#EEEEEE</color>
+    <color name="menu_name_color">#262626</color>
+    <color name="menu_id_color">#919191</color>
+    <color name="line_color">#D9D9D9</color>
+    <color name="main_tab_text_color">#aaaaaa</color>
+    <color name="main_tab_text_color_focused">#1ABC9C</color>
+    <color name="black">#000000</color>
+    <color name="line_black_alpha">#B2000000</color>
+    <color name="attachment_topic">#6D6D72</color>
+
+    <!-- Common colors -->
+    <color name="bg_color">#1ABC9C</color>
+    <!-- 标题栏背景色26,188,156 -->
+    <color name="white">#FFFFFF</color>
+    <!--错题界面专用白色-->
+    <color name="error_selector">#99FFFFFF</color>
+    <!-- 标题栏文字及按钮颜色255,255,255 -->
+    <color name="hint_text_lighter">#AAAAAA</color>
+    <!-- 提示文字，浅灰色170,170,170 -->
+    <color name="hint_text">#919191</color>
+    <!-- 提示文字，浅灰色145,145,145 -->
+    <color name="title_unread">#000000</color>
+    <!-- 内容标题（未读），黑色0,0,0 -->
+    <color name="title_read">#333333</color>
+    <!-- 内容标题（已读），深灰51,51,51 -->
+    <color name="bg_list">#D7DCDE</color>
+    <!-- 列表页背景色，中灰215,220,222 -->
+    <color name="item_selected">#D9D9D9</color>
+    <!-- 列表项（选中），217,217,217 -->
+    <color name="tv_black">#262626</color>
+    <!-- RGB(38,38,38)    所有黑体字颜色 -->
+    <color name="tv_green">#919191</color>
+    <!-- RGB(145,145,145)    绿色字体颜色 -->
+    <color name="unKnow_red">#FF3A2F</color>
+    <!-- REDCOLOR RGB(255,58,47) 未标注红色 -->
+    <color name="home_work_red">#FF362B</color>
+    <!--  RGB(255,54,43) 家庭作业状态剩余时间 -->
+    <color name="home_work_details_section">#A8A8AA</color>
+    <!--  RGB(168,168,170) 所属章节颜色 -->
+
+    <!-- System Settings -->
+    <color name="bg_settings">#EEEEEE</color>
+    <!-- 设置页背景色，238,238,238 -->
+    <color name="setting_list">#FBFBFB</color>
+    <!-- 设置页列表，251,251,251 -->
+    <color name="setting_item_selected">#D9D9D9</color>
+    <!-- 设置页列表（选中），217,217,217 -->
+    <color name="grey_hint_title">#6d6d6d</color>
+    <!-- 发送消息页面，109,109,109 -->
+
+    <color name="btn_bg_color">#16A085</color>
+
+    <color name="text_color">#919191</color>
+    <!--学习任务-->
+    <color name="learn_right">#2ECC71</color>
+    <color name="learn_half_right">#F8B551</color>
+    <color name="learn_wrong">#FF4B66</color>
+    <color name="learn_answered">#14B8EB</color>
+    <color name="learn_no_answer">#B8B8B9</color>
+    <!--统计分析-->
+    <color name="rank_color">#1ABC9C</color>
+    <color name="rgb_262626">#262626</color>
+    <color name="high_pie_color">#00ABDF</color>
+    <color name="high_nomal_pie_color">#95C94B</color>
+    <color name="nomal_pie_color">#F8B551</color>
+    <color name="low_pie_color">#EC7063</color>
+    <color name="max_bar_color">#00ABDF</color>
+    <color name="average_bar_color">#95C94B</color>
+    <color name="min_bar_color">#EC7063</color>
+    <color name="self_bar_color">#1ABC9C</color>
+    <color name="bar_lable_color">#4B597C</color>
+    <color name="bar_pie_border_color">#c1c1c1</color>
+    <color name="rgb_d2d2d2">#d2d2d2</color>
+    <color name="ver_lable_color">#EC2E4A</color>
+    <color name="line_chart_color">#E9EAEC</color>
+    <color name="hori_chart_color">#4B597C</color>
+    <color name="rgb_282828">#282828</color>
 </resources>

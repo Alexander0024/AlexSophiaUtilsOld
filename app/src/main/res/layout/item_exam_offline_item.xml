@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:id="@+id/item_exam_offline_item"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="@dimen/h_128"
+                                     android:gravity="center_vertical"
+                                     android:orientation="horizontal"
+                                     android:paddingLeft="@dimen/h_30"
+                                     android:background="@drawable/selector_common_bg"
+    >
+
+    <ImageView
+        android:id="@+id/iv_learn_list_icon"
+        android:layout_width="@dimen/h_58"
+        android:layout_height="@dimen/h_58"
+        android:src="@mipmap/course01"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/h_30"
+        android:paddingTop="@dimen/h_10"
+        android:paddingBottom="@dimen/h_10"
+        android:orientation="vertical"
+        >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/h_30"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tv_item_exam_offline_title"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/size_28"/>
+
+            <TextView
+                android:id="@+id/tv_item_exam_offline_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/h_20"
+                android:textSize="@dimen/size_48"
+                android:textColor="@color/unKnow_red"
+                />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h_10">
+
+            <TextView
+                android:id="@+id/tv_item_exam_offine_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/class_rank"
+                android:textColor="@color/hint_text_lighter"
+                android:textSize="@dimen/size_24"/>
+            <TextView
+                android:id="@+id/tv_item_exam_offline_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_toRightOf="@id/tv_item_exam_offine_state"
+                android:textColor="@color/tv_green"
+                android:textSize="@dimen/size_24"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_exam_offline_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_item_exam_offline_rank"
+                android:textColor="@color/hint_text_lighter"
+                android:textSize="@dimen/size_24"/>
+
+            <TextView
+                android:id="@+id/tv_item_exam_offline_creatime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/h_30"
+                android:textColor="@color/hint_text_lighter"
+                android:textSize="@dimen/size_24"/>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

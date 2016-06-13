@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:round="http://schemas.android.com/apk/res-auto"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:gravity="center_vertical"
+                                     android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/send_contact_split_height"
+        android:background="#E0E0E0"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin_left"
+        android:textColor="#16A085"
+        android:textSize="@dimen/text_size_content"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tv_height"
+        android:paddingLeft="@dimen/common_margin_left"
+        android:paddingRight="@dimen/common_margin_right">
+
+        <com.lirenkj.educationforparent.share.views.RoundedImageView
+            android:id="@+id/riv_avatar"
+            android:layout_width="@dimen/info_stu_avatar_size"
+            android:layout_height="@dimen/info_stu_avatar_size"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/public_imges_128px"
+            round:riv_oval="true"/>
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="@dimen/h_36"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/h_40"
+            android:src="@mipmap/icon_miniplan_01"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/iv_select"
+            android:layout_toRightOf="@id/riv_avatar">
+
+            <TextView
+                android:id="@+id/tv_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/common_margin_left"
+                android:gravity="center_vertical"
+                android:textColor="@color/tv_green"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <TextView
+                android:id="@+id/sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/common_margin_less"
+                android:layout_marginRight="@dimen/common_margin_right"
+                android:gravity="center_vertical"
+                android:textColor="@color/hint_text_lighter"
+                android:textSize="@dimen/text_size_content"/>
+        </LinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

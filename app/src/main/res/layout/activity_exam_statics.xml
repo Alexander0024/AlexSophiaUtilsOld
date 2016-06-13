@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_header"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="166px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/this_exam"
+                    android:textColor="@color/rgb_262626"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:id="@+id/name_exam_statics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/rank_color"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/class_rank_text"
+                    android:textColor="@color/rgb_262626"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:id="@+id/rank_exam_statics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/rank_color"
+                    android:textSize="60px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ming_text"
+                    android:textColor="@color/rgb_262626"
+                    android:textSize="30px"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22px"
+                    android:text="@string/status_pre_text"
+                    android:textColor="@color/rgb_262626"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:id="@+id/status_exam_statics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22px"
+                    android:textColor="@color/rank_color"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22px"
+                    android:text="@string/status_se_text"
+                    android:textColor="@color/rgb_262626"
+                    android:textSize="30px"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoFrameLayout
+                android:id="@+id/bar_content_exam_statics"
+                android:layout_width="match_parent"
+                android:layout_height="300px"
+                android:layout_marginBottom="60px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"/>
+
+            <View
+                android:id="@+id/line_exam_statics"
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:background="@drawable/common_line_chart"
+                android:layerType="software"
+                android:visibility="invisible"/>
+
+            <com.zhy.autolayout.AutoFrameLayout
+                android:id="@+id/pie_content_exam_statics"
+                android:layout_width="match_parent"
+                android:layout_height="450px"
+                android:layout_marginBottom="30px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+</com.zhy.autolayout.AutoLinearLayout>

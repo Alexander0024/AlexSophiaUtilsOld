@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:id="@+id/item_practice_item"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="@dimen/h_128"
+                                     android:gravity="center_vertical"
+                                     android:orientation="horizontal"
+                                     android:paddingLeft="@dimen/h_30"
+                                     android:background="@drawable/selector_common_bg"
+    >
+
+    <ImageView
+        android:id="@+id/iv_learn_list_icon"
+        android:layout_width="@dimen/h_58"
+        android:layout_height="@dimen/h_58"
+        android:src="@mipmap/course01"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/h_30"
+        android:paddingTop="@dimen/h_10"
+        android:paddingBottom="@dimen/h_10"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/h_30"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tv_item_practice_title"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="五年级三班-第五单元测试"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/size_28"/>
+
+
+            <TextView
+                android:id="@+id/tv_item_practice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/h_20"
+                android:textColor="@color/hint_text_lighter"
+                android:textSize="@dimen/size_24"
+                android:text="17:30"/>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h_10">
+
+            <TextView
+                android:id="@+id/tv_item_practice_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/size_24"/>
+
+            <TextView
+                android:id="@+id/tv_item_practice_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_toRightOf="@id/tv_item_practice_total"
+                android:text="@string/no_answer"
+                android:textColor="@color/home_work_red"
+                android:textSize="@dimen/size_24"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_practice_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_item_practice_total"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/size_24"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginRight="200px"
+                android:visibility="gone"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_item_practice_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/h_30"
+                android:textColor="@color/hint_text_lighter"
+                android:textSize="@dimen/size_24"
+                android:visibility="invisible"
+                />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

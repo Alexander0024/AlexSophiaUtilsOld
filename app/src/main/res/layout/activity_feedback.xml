@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout style="@style/pageStyle.grey"
+                                     xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:orientation="vertical">
+
+    <include
+        android:id="@+id/rv_headerBar"
+        layout="@layout/common_header"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_feedback_hint"
+            style="@style/textViewStyle"
+            android:layout_marginTop="@dimen/common_margin_top"
+            android:text="@string/setting_feedback_content"/>
+
+        <View
+            android:id="@+id/view_split"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/info_line_margin"
+            android:layout_below="@id/tv_feedback_hint"
+            android:layout_marginTop="@dimen/common_margin_normal"
+            android:background="@color/hint_text"/>
+
+        <EditText
+            android:id="@+id/edtTxt_feedback"
+            style="@style/editTextStyle"
+            android:layout_height="match_parent"
+            android:layout_below="@id/view_split"
+            android:gravity="top"
+            android:hint="@string/setting_feedback_input_hint"
+            android:maxLength="400"
+            android:paddingBottom="@dimen/common_margin_right"
+            android:paddingLeft="@dimen/common_margin_left"
+            android:paddingRight="@dimen/common_margin_right"
+            android:paddingTop="@dimen/common_margin_left"
+            android:textColor="@color/tv_black"/>
+
+        <TextView
+            android:id="@+id/tv_text_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/common_margin_less"
+            android:layout_marginRight="@dimen/common_margin_less"
+            android:text="0 / 400"
+            android:visibility="gone"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:round="http://schemas.android.com/apk/res-auto"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:background="@color/white"
+                                     android:orientation="vertical">
+
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></com.zhy.autolayout.AutoFrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_1"
+        android:background="#999999"/>
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_118"
+        android:orientation="horizontal">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            style="@style/Main_tab_bg_ll_style">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/tab1_main"
+                style="@style/Main_tab_ll_style">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    style="@style/Main_tab_img_rl_style">
+
+                    <ImageView
+                        android:id="@+id/tab1_iv_main"
+                        style="@style/Main_tab_img_style"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <com.lirenkj.educationforparent.share.views.RoundedImageView
+                        android:id="@+id/iv_news_unread_mark"
+                        android:layout_width="@dimen/h_24"
+                        android:layout_height="@dimen/h_24"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/h_14"
+                        android:src="@color/unKnow_red"
+                        android:visibility="gone"
+                        round:riv_oval="true"/>
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    style="@style/Main_tab_tv_rl_style">
+
+                    <TextView
+                        android:id="@+id/tab1_tv_main"
+                        style="@style/Main_tab_tv_style"
+                        android:text="@string/news_text"/>
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            style="@style/Main_tab_bg_ll_style">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/tab2_main"
+                style="@style/Main_tab_ll_style">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    style="@style/Main_tab_img_rl_style">
+
+                    <ImageView
+                        android:id="@+id/tab2_iv_main"
+                        style="@style/Main_tab_img_style"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <com.lirenkj.educationforparent.share.views.RoundedImageView
+                        android:id="@+id/iv_learning_unread_mark"
+                        android:layout_width="@dimen/h_24"
+                        android:layout_height="@dimen/h_24"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/h_14"
+                        android:src="@color/unKnow_red"
+                        android:visibility="gone"
+                        round:riv_oval="true"/>
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    style="@style/Main_tab_tv_rl_style">
+
+                    <TextView
+                        android:id="@+id/tab2_tv_main"
+                        style="@style/Main_tab_tv_style"
+                        android:text="@string/learn_text"/>
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            style="@style/Main_tab_bg_ll_style">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/tab3_main"
+                style="@style/Main_tab_ll_style">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    style="@style/Main_tab_img_rl_style">
+
+                    <ImageView
+                        android:id="@+id/tab3_iv_main"
+                        style="@style/Main_tab_img_style"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <com.lirenkj.educationforparent.share.views.RoundedImageView
+                        android:id="@+id/iv_statis_unread_mark"
+                        android:layout_width="@dimen/h_24"
+                        android:layout_height="@dimen/h_24"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/h_14"
+                        android:src="@color/unKnow_red"
+                        android:visibility="gone"
+                        round:riv_oval="true"/>
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    style="@style/Main_tab_tv_rl_style">
+
+                    <TextView
+                        android:id="@+id/tab3_tv_main"
+                        style="@style/Main_tab_tv_style"
+                        android:text="@string/statis_text"/>
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

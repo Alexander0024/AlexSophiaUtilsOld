@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    android:id="@+id/item_newslist_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:round="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/h_128"
+    android:background="@drawable/selector_common_bg"
+    android:paddingLeft="@dimen/border_margin">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rv_news_icons"
+        android:layout_width="@dimen/h_65"
+        android:layout_height="@dimen/h_65"
+        android:layout_centerVertical="true">
+
+        <com.lirenkj.educationforparent.share.views.RoundedImageView
+            android:id="@+id/iv_news_list_icon"
+            android:layout_width="@dimen/h_58"
+            android:layout_height="@dimen/h_58"
+            android:layout_centerVertical="true"
+            android:minHeight="@dimen/h_58"
+            android:minWidth="@dimen/h_58"
+            android:src="@mipmap/bulletin"
+            round:riv_oval="true"/>
+
+        <com.lirenkj.educationforparent.share.views.RoundedImageView
+            android:id="@+id/iv_news_unread"
+            android:layout_width="@dimen/h_24"
+            android:layout_height="@dimen/h_24"
+            android:layout_alignParentRight="true"
+            android:src="@color/unKnow_red"
+            round:riv_oval="true"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/lv_newslist_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/h_30"
+        android:layout_marginTop="@dimen/h_30"
+        android:layout_toRightOf="@id/rv_news_icons"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/h_10">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_item_news_list_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bg_color"
+                android:textSize="@dimen/size_24"/>
+
+            <TextView
+                android:id="@+id/tv_item_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/h_20"
+                android:layout_toRightOf="@id/tv_item_news_list_name"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/size_24"/>
+
+            <TextView
+                android:id="@+id/tv_item_news_list_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/h_30"
+                android:textColor="@color/hint_text"
+                android:textSize="@dimen/size_24"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_item_unread_count"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h_36"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/h_30"
+                android:background="@drawable/news_unread_count"
+                android:gravity="center"
+                android:paddingLeft="@dimen/h_14"
+                android:paddingRight="@dimen/h_14"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_item_news_list_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_margin_less"
+                android:layout_marginTop="@dimen/h_2"
+                android:layout_toLeftOf="@id/tv_item_unread_count"
+                android:ellipsize="end"
+                android:paddingRight="@dimen/common_margin_less"
+                android:singleLine="true"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/size_28"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_88"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+
+    <ImageView
+        android:id="@+id/iv_item_attachment_icon"
+        android:layout_width="@dimen/h_58"
+        android:layout_height="@dimen/h_58"
+        android:src="@mipmap/unknown" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/h_30"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attachment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/tv_black"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/tv_attachment_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_20"
+                android:textColor="@color/tv_green"
+                android:textSize="20px"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rll_down_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/h_30"
+            android:paddingRight="@dimen/h_30"
+            >
+            <TextView
+                android:id="@+id/tv_attachment_state"
+                android:layout_width="108px"
+                android:layout_height="52px"
+                android:background="@mipmap/button_attachment"
+                android:gravity="center"
+                android:text="@string/download"
+                android:textColor="@color/bg_color"
+                android:visibility="visible"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/size_24"
+                />
+           <RelativeLayout
+               android:id="@+id/rl_pgb"
+               android:layout_width="108px"
+               android:layout_height="52px"
+               android:visibility="invisible"
+               android:layout_centerInParent="true"
+               >
+               <com.lirenkj.educationforparent.share.views.RoundProgressBar
+                   android:id="@+id/pgb"
+                   android:layout_width="40px"
+                   android:layout_height="40px"
+                   android_custom:roundColor="@android:color/transparent"
+                   android_custom:roundWidth="4px"
+                   android_custom:roundProgressColor="@color/bg_color"
+                   android_custom:textIsDisplayable="false"
+                   android:layout_centerInParent="true"
+                   />
+            <ImageView
+                android:id="@+id/iv_attachment_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/button_pause"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                />
+           </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

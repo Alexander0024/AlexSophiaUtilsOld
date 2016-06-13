@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                     android:id="@+id/item_error_item"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="@dimen/h_128"
+                                     android:gravity="center_vertical"
+                                     android:paddingLeft="@dimen/h_30"
+                                     android:orientation="horizontal"
+                                     android:background="@drawable/selector_common_bg"
+    >
+
+    <ImageView
+        android:id="@+id/iv_learn_list_icon"
+        android:layout_width="@dimen/h_58"
+        android:layout_height="@dimen/h_58"
+        />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/h_30"
+        android:paddingTop="@dimen/h_10"
+        android:paddingBottom="@dimen/h_10"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+
+        <com.lirenkj.educationforparent.share.views.ImageTextView
+            android:id="@+id/tv_item_error_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/h_30"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/tv_black"
+            android:clickable="false"
+            android:enabled="false"
+            android:textSize="@dimen/size_28"/>
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h_10">
+
+            <TextView
+                android:id="@+id/tv_item_error_question_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/btn_bg_color"
+                android:textSize="@dimen/size_24"/>
+
+            <TextView
+                android:id="@+id/tv_item_error_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/h_20"
+                android:layout_toRightOf="@id/tv_item_error_question_type"
+                android:textColor="@color/hint_text_lighter"
+                android:textSize="@dimen/size_24"/>
+
+            <TextView
+                android:id="@+id/tv_item_error_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/h_30"
+                android:textColor="@color/hint_text_lighter"
+                android:textSize="@dimen/size_24"/>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

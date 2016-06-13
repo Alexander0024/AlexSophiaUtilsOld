@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/pageStyle.grey"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/rv_headerBar"
+        layout="@layout/common_header"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_headerBar"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/ico_size"
+            android:layout_height="@dimen/ico_size"
+            android:layout_marginTop="@dimen/margin_top"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/app_logo_144_3x"/>
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            style="@style/textViewStyle.black"
+            android:layout_marginTop="@dimen/margin_smaller"
+            android:gravity="center"/>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/lv_web_site"
+            style="@style/aboutItemStyle"
+            android:layout_marginTop="@dimen/margin_wrapper"
+            android:background="@drawable/selector_common_bg">
+
+            <TextView
+                style="@style/baseItemTxtStyle"
+                android:text="@string/setting_web_site"/>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingLeft="@dimen/common_margin_less">
+
+                <TextView
+                    android:id="@+id/tv_web_site"
+                    style="@style/baseItemTxtStyle"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/lv_wechat"
+            style="@style/aboutItemStyle"
+            android:layout_marginTop="@dimen/common_margin_large"
+            android:background="@drawable/selector_common_bg"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/baseItemTxtStyle"
+                android:text="@string/setting_wechat_name"/>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingLeft="@dimen/common_margin_less">
+
+                <TextView
+                    android:id="@+id/tv_wechat_id"
+                    style="@style/baseItemTxtStyle"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/lv_hot_line"
+            style="@style/aboutItemStyle"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_large"
+            android:background="@drawable/selector_common_bg">
+
+            <TextView
+                style="@style/baseItemTxtStyle"
+                android:text="@string/setting_hot_line"/>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/common_margin_less">
+
+                <TextView
+                    android:id="@+id/tv_hot_line_number"
+                    style="@style/baseItemTxtStyle"
+                    android:paddingTop="@dimen/common_margin_less"/>
+
+                <TextView
+                    android:id="@+id/tv_hot_line_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_smaller"
+                    android:paddingBottom="@dimen/common_margin_less"
+                    android:text="@string/setting_hot_line_number"
+                    android:textColor="@color/hint_text_lighter"
+                    android:textSize="@dimen/text_size_small_hint"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

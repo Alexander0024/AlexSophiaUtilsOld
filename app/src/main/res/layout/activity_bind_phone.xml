@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/pageStyle.grey"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/rv_headerBar"
+        layout="@layout/common_header"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_headerBar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_bind_unbind_hint"
+            style="@style/textViewStyle"
+            android:layout_marginTop="@dimen/common_margin_top"
+            android:text="@string/bind_phone_input_phone_content"/>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtTxt_bind_phone"
+                style="@style/editTextStyle.phone"
+                android:layout_marginTop="@dimen/common_margin_less"
+                android:hint="@string/bind_phone_hint"/>
+
+            <ImageView
+                android:id="@+id/iv_phone_locker"
+                android:layout_width="@dimen/info_lock_size"
+                android:layout_height="@dimen/info_lock_size"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_margin_left"
+                android:src="@mipmap/icon_miniplan_12"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/lv_bind_actions"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="@dimen/btn_wrapper"
+            android:layout_marginRight="@dimen/btn_wrapper"
+            android:layout_marginTop="@dimen/common_margin_normal">
+
+            <EditText
+                android:id="@+id/edtTxt_authcode"
+                style="@style/editTextStyle.authcode"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="@dimen/h_10"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/btn_send_authcode"
+                style="@style/buttonStyleCenterWhite.smallcorner"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="@string/bind_phone_get_authcode"
+                android:textColor="@color/hint_text_lighter"
+                android:textSize="@dimen/text_size_normal"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/lv_unbind_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_normal">
+
+            <Button
+                android:id="@+id/btn_unbind"
+                style="@style/buttonStyle"
+                android:text="@string/bind_phone_unbind"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

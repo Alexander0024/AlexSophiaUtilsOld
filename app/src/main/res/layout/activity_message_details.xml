@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/pageStyle.white"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/rv_headerBar"
+        layout="@layout/common_header"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/ll_notice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_headerBar"
+        android:layout_marginLeft="@dimen/border_margin"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_notice_title"
+            style="@style/myInfoTxtStyle"
+            android:paddingRight="@dimen/border_margin"
+            android:paddingTop="@dimen/notice_margin_top"/>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/notice_margin_small">
+
+            <TextView
+                android:id="@+id/tv_sender_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/text_size_content"/>
+
+            <TextView
+                android:id="@+id/tv_sender_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/notice_margin_small"
+                android:textColor="@color/hint_text"
+                android:textSize="@dimen/text_size_content"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:id="@+id/tv_send_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/notice_margin_small"
+            android:textColor="@color/hint_text"
+            android:textSize="@dimen/text_size_content"/>
+
+        <View
+            style="@style/splitLineStyle"
+            android:layout_marginLeft="0px"
+            android:layout_marginTop="@dimen/notice_margin_small"
+            android:background="@color/bg_color"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_notice_content"
+                style="@style/baseItemTxtStyle"
+                android:layout_marginTop="@dimen/h_52"
+                android:paddingBottom="@dimen/common_margin_large"
+                android:paddingRight="@dimen/common_margin_right"
+                android:textSize="@dimen/text_size_normal"/>
+        </ScrollView>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rv_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_headerBar"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/lVi_messages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dialog_title_height"
+            android:divider="@null"
+            android:dividerHeight="0px"
+            android:listSelector="@android:color/transparent"
+            android:transcriptMode="normal"/>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rv_bottom_send"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/btn_wrapper"
+                android:paddingRight="@dimen/btn_wrapper"
+                android:text="@string/send"
+                android:textColor="@color/bg_color"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <EditText
+                android:id="@+id/edtTxt_reply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/h_12"
+                android:layout_marginLeft="@dimen/btn_wrapper"
+                android:layout_marginRight="@dimen/h_100"
+                android:layout_marginTop="@dimen/h_12"
+                android:background="@drawable/common_corner_button_small_white"
+                android:hint="@string/reply"
+                android:imeOptions="actionSend"
+                android:paddingLeft="@dimen/h_12"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h_1"
+            android:layout_above="@id/rv_bottom_send"
+            android:background="@color/bg_color"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

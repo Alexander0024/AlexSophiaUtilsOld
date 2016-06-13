@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"
+                                       android:background="@color/bg_color">
+
+    <View
+        android:id="@+id/vv_header_space"
+        android:layout_width="match_parent"
+        android:layout_height="40px"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_below="@id/vv_header_space">
+
+        <ImageView
+            android:id="@+id/iv_goBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/h_16"
+            android:paddingBottom="@dimen/h_26"
+            android:paddingRight="@dimen/common_margin_right"
+            android:paddingTop="@dimen/h_26"
+            android:src="@mipmap/iconplan_left"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_left"
+            style="@style/titleTextStyle"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/common_margin_left"
+            android:paddingRight="@dimen/common_margin_right"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_right"
+            style="@style/titleTextStyle"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:minWidth="@dimen/h_120"
+            android:paddingLeft="@dimen/common_margin_left"
+            android:paddingRight="@dimen/common_margin_right"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/titleTextStyle"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/h_128"
+            android:layout_marginRight="@dimen/h_30"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingLeft="@dimen/common_margin_left"
+            android:paddingRight="@dimen/common_margin_right"
+            android:textSize="@dimen/text_size_normal"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

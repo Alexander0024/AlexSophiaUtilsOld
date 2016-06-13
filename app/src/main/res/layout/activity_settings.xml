@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout style="@style/pageStyle.grey"
+                                       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/rv_headerBar"
+        layout="@layout/common_header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_headerBar">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 意见反馈 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_feedback"
+                style="@style/aboutItemStyle"
+                android:background="@drawable/selector_common_bg"
+                android:layout_marginTop="@dimen/common_margin_top"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/baseItemTxtStyle"
+                    android:text="@string/setting_feedback"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        style="@style/baseItemTxtStyle"
+                        android:text="@string/setting_feedback_hint"
+                        android:textColor="@color/hint_text"
+                        android:textSize="@dimen/text_size_item"/>
+
+                    <ImageView
+                        style="@style/rightArrowStyle"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/splitLineStyle"/>
+
+            <!-- 使用许可协议 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_licence"
+                style="@style/aboutItemStyle"
+                android:background="@drawable/selector_common_bg"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/baseItemTxtStyle"
+                    android:text="@string/login_accept_licence_title"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <ImageView
+                        style="@style/rightArrowStyle"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <!-- 使用WiFi下载 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                style="@style/aboutItemStyle"
+                android:background="@drawable/selector_common_bg"
+                android:layout_marginTop="@dimen/common_margin_top">
+
+                <TextView
+                    style="@style/baseItemTxtStyle"
+                    android:text="@string/setting_wifi_download"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <ToggleButton
+                        android:id="@+id/tglBtn_switch"
+                        android:layout_width="@dimen/toggle_width"
+                        android:layout_height="@dimen/toggle_height"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/setting_switch_button_selector"
+                        android:checked="false"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn=""/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/btn_wrapper"
+                android:paddingLeft="@dimen/border_margin"
+                android:text="@string/setting_wifi_download_hint"
+                android:textColor="@color/hint_text"
+                android:textSize="@dimen/text_size_small"/>
+
+            <!-- 清除本地缓存 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_clear_cache"
+                style="@style/aboutItemStyle"
+                android:background="@drawable/selector_common_bg"
+                android:layout_marginTop="@dimen/common_margin_top"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/baseItemTxtStyle"
+                    android:text="@string/setting_clear_cache"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/tv_clear_cache"
+                        style="@style/baseItemTxtStyle"
+                        android:layout_gravity="center"
+                        android:paddingRight="@dimen/common_margin_right"
+                        android:text="0KB"
+                        android:textColor="@color/hint_text"
+                        android:textSize="@dimen/text_size_item"/>
+
+                    <com.ant.liao.GifView
+                        android:id="@+id/gif_clear_cache"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/common_margin_right"
+                        android:indeterminate="false"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/splitLineStyle"/>
+
+            <!-- 修改密码 -->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_change_password"
+                android:background="@drawable/selector_common_bg"
+                style="@style/aboutItemStyle"
+                android:paddingRight="0px">
+
+                <TextView
+                    style="@style/baseItemTxtStyle"
+                    android:text="@string/setting_change_password"/>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <ImageView
+                        style="@style/rightArrowStyle"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+</com.zhy.autolayout.AutoRelativeLayout>
