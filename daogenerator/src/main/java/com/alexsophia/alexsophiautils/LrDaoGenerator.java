@@ -1,4 +1,4 @@
-package com.example;
+package com.alexsophia.alexsophiautils;
 
 import de.greenrobot.daogenerator.DaoGenerator;
 import de.greenrobot.daogenerator.Entity;
@@ -8,7 +8,7 @@ public class LrDaoGenerator {
     public static void main(String[] args) throws Exception {
         Schema schema = new Schema(1, "greendao");
         addNote(schema);
-        new DaoGenerator().generateAll(schema, "..\\AlexSophiaUtils\\app\\src\\main\\java-gen");
+        new DaoGenerator().generateAll(schema, "./../AlexSophiaUtils/app/src/main/java-gen");
     }
 
     /**

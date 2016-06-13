@@ -130,6 +130,7 @@
     <dimen name="text_size_item">30px</dimen>
     <dimen name="text_size_small">24px</dimen>
     <dimen name="text_size_small_hint">20px</dimen>
+    <dimen name="normal_text">24px</dimen>
 
     <!-- Custom Dialog -->
     <dimen name="dialog_wrapper">50px</dimen>
