@@ -21,7 +21,7 @@ import com.alexsophia.alexsophiautils.utils.ToastUtil;
 import org.greenrobot.eventbus.Subscribe;
 
 /**
- * Created by liuweiping on 2016-3-7.
+ *
  */
 public class MainActivity extends CommonMainActivity implements MainPresenters.View {
     private String TAG = "MainActivity";

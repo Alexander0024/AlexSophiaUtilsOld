@@ -1,21 +1,22 @@
 package com.alexsophia.alexsophiautils.features.base.ui;
 
 import android.app.Activity;
+import android.content.Context;
+import android.graphics.Canvas;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.alexsophia.alexsophiautils.R;
 import com.alexsophia.alexsophiautils.share.adapters.CommonAdapter;
 import com.alexsophia.alexsophiautils.share.adapters.ViewHolder;
+import com.alexsophia.alexsophiautils.share.views.slidingmenu.SlidingMenu;
 import com.alexsophia.alexsophiautils.share.views.RoundedImageView;
-import com.alexsophia.alexsophiautils.share.views.SlidingMenu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,40 +25,40 @@ import butterknife.Bind;
 import butterknife.OnClick;
 
 /**
- * Created by liuweiping on 2016-3-8.
  * 此类为MainActivity的父类，只要在MainActivity中实现该实现的方法即可
  */
 public abstract class CommonMainActivity extends BaseFragmentActivity {
     private String TAG = "CommonMainActivity";
-    @Bind(R.id.sliding_menu)
-    SlidingMenu mSlidingMenu;
+    /**
+     * 主界面相关控件
+     */
     @Bind(R.id.tab1_iv_main)
-    ImageView mTab1Img;
+    ImageView mTab1Img; // 第一个Tab的图标
     @Bind(R.id.tab2_iv_main)
-    ImageView mTab2Img;
+    ImageView mTab2Img; // 第二个Tab的图标
     @Bind(R.id.tab3_iv_main)
-    ImageView mTab3Img;
+    ImageView mTab3Img; // 第三个Tab的图标
     @Bind(R.id.tab1_tv_main)
-    TextView mTab1Tv;
+    TextView mTab1Tv; // 第一个Tab的文字
     @Bind(R.id.tab2_tv_main)
-    TextView mTab2Tv;
+    TextView mTab2Tv; // 第二个Tab的文字
     @Bind(R.id.tab3_tv_main)
-    TextView mTab3Tv;
-    @Bind(R.id.lv_menu)
-    ListView mListView;
-    protected List<Fragment> fragments;
-    @Bind(R.id.iv_menu)
-    RoundedImageView mRoundedImageView;
-    @Bind(R.id.tv_menu_name)
-    TextView mNameTv;
-    @Bind(R.id.hidden_layout)
-    LinearLayout mHiddenLayout;
+    TextView mTab3Tv; // 第三个Tab的文字
 
+    /**
+     * 菜单相关控件
+     */
+    @Bind(R.id.sliding_menu)
+    SlidingMenu mSlidingMenu; // 菜单
+    ListView mListView; // 菜单列表
+    RoundedImageView mRoundedImageView; // 用户头像
+    TextView mNameTv; // 用户姓名
+
+    protected List<Fragment> fragments; // 主界面三个fragment切换
     private List<MenuBean> datas; // 菜单列表数据
     private CommonAdapter<MenuBean> adapter; // 菜单列表的Adapter
     private FragmentManager mFragmentManager; // 碎片管理器
     private Fragment mContent; // 当前展示的fragment标识
-    private boolean isMenuShown; // 通过Menu的滑动事件判断页面开关
 
     @Override
     protected int getContentViewRes() {
@@ -99,6 +100,12 @@ public abstract class CommonMainActivity extends BaseFragmentActivity {
      * 初始化菜单
      */
     private void initMenu() {
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context
+                .LAYOUT_INFLATER_SERVICE);
+        final View menuLayout = inflater.inflate(R.layout.menu_layout, null);
+        mListView = (ListView) menuLayout.findViewById(R.id.lv_menu);
+        mRoundedImageView = (RoundedImageView) menuLayout.findViewById(R.id.iv_menu);
+        mNameTv = (TextView) menuLayout.findViewById(R.id.tv_menu_name);
         /**
          * 初始化菜单项目
          */
@@ -113,7 +120,7 @@ public abstract class CommonMainActivity extends BaseFragmentActivity {
          */
         adapter = new CommonAdapter<MenuBean>(this, R.layout.menu_item, datas) {
             @Override
-            public void covertView(ViewHolder viewholder, MenuBean menuBean) {
+            public void covertView(final ViewHolder viewholder, MenuBean menuBean) {
                 /**
                  * 设置菜单名称
                  */
@@ -136,58 +143,45 @@ public abstract class CommonMainActivity extends BaseFragmentActivity {
                 } else {
                     viewholder.setViewVisibility(R.id.tv_menu_version_item, View.GONE);
                 }
-            }
-
-            /**
-             * 设置页面所有元素为默认
-             */
-            @Override
-            public boolean areAllItemsEnabled() {
-                return super.areAllItemsEnabled();
-            }
-
-            /**
-             * 根据状态设置页面每个元素的点击事件
-             * @return true：如果菜单为开，允许点击；false：如果菜单为关，禁止点击。
-             */
-            @Override
-            public boolean isEnabled(int position) {
-                return isMenuShown;
+                /**
+                 * 设置每一项的点击事件
+                 */
+                viewholder.setClickListener(R.id.rl_menu_item, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        changeActivity(viewholder.getPos());
+                    }
+                });
             }
         };
         mListView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
         /**
-         * 设置每一项点击时切换事件
-         */
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                changeActivity(position);
-            }
-        });
-        /**
-         * 设置Menu打开关闭的回调事件
-         */
-        mSlidingMenu.setToggleListener(new SlidingMenu.ToggleListener() {
-            @Override
-            public void toggle(boolean isClosed) {
-                if (isClosed) {
-                    mHiddenLayout.setVisibility(View.GONE);
-                    isMenuShown = false;
-                } else {
-                    mHiddenLayout.setVisibility(View.VISIBLE);
-                    isMenuShown = true;
-                }
-                /**
-                 * 修复菜单第一次打开时无法刷新点击可否点击的状态
-                 */
-                adapter.notifyDataSetChanged();
-            }
-        });
-        /**
-         * 初始化菜单中的姓名
+         * 初始化菜单中的家长姓名
          */
         mNameTv.setText(getName());
+
+        /**
+         * 初始化SlidingMenu属性
+         */
+        mSlidingMenu.setMode(SlidingMenu.LEFT);
+        mSlidingMenu.setShadowDrawable(R.drawable.background_shadow);
+        mSlidingMenu.setShadowWidth(50);
+        mSlidingMenu.setMenu(menuLayout);
+        mSlidingMenu.setBehindCanvasTransformer(new SlidingMenu.CanvasTransformer() {
+            @Override
+            public void transformCanvas(Canvas canvas, float percentOpen) {
+                float scale = (float) (percentOpen * 0.3 + 0.7);
+                canvas.scale(scale, scale, canvas.getWidth(), canvas.getHeight() / 2);
+            }
+        });
+//        mSlidingMenu.setAboveCanvasTransformer(new SlidingMenu.CanvasTransformer() {
+//            @Override
+//            public void transformCanvas(Canvas canvas, float percentOpen) {
+//                float scale = (float) ((1 - percentOpen) * 0.3 + 0.7);
+//                canvas.scale(scale, scale, 0, canvas.getHeight() / 2);
+//            }
+//        });
     }
 
     /**
@@ -341,12 +335,9 @@ public abstract class CommonMainActivity extends BaseFragmentActivity {
         return getResources().getColor(R.color.main_tab_text_color);
     }
 
-    @OnClick({ R.id.tab1_main, R.id.tab2_main, R.id.tab3_main, R.id.hidden_layout})
+    @OnClick({ R.id.tab1_main, R.id.tab2_main, R.id.tab3_main})
     public void click(View v) {
         switch (v.getId()) {
-            case R.id.hidden_layout:
-                mSlidingMenu.closeMenu();
-                break;
             case R.id.tab1_main:
                 selectTab(0, false);
                 break;
@@ -372,7 +363,7 @@ public abstract class CommonMainActivity extends BaseFragmentActivity {
      * @return 菜单是否打开
      */
     protected boolean isMenuAlreadyOpened() {
-        return mSlidingMenu.isOpened();
+        return mSlidingMenu.isMenuShowing();
     }
 
     /**
