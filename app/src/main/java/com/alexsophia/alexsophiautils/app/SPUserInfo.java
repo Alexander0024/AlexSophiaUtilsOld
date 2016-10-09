@@ -10,9 +10,6 @@ import com.alexsophia.alexsophiautils.utils.sharedpreferences.SharedPreferencesU
 
 /**
  * UserInfo SharedPreferences文件工具
- *
- * @author liqian
- * @version v1.0
  */
 public class SPUserInfo extends SharedPreferencesUtil {
     private final static String TAG = "SPUserInfo";

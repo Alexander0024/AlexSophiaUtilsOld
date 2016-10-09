@@ -15,7 +15,7 @@ import greendao.DaoSession;
 
 
 /**
- * Created by liuweiping on 2016-2-24.
+ * Main Application for APP.
  */
 public class MyApplication extends Application {
     private static MyApplication myApplication;
