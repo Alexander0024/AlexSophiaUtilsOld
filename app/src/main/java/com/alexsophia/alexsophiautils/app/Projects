@@ -1,0 +1,15 @@
+object Projects {
+    fun startUIAndStartService(context: Context) {
+        // Start UI
+        val it = context.packageManager.getLaunchIntentForPackage("com.")
+        context.startActivity(it)
+        // Click Connect
+        AccessibilityUtils.performClick("com.", 5000)
+        AccessibilityUtils.performClick("Cancel", 120 * 1000, {
+            loge("Still connecting? Check log!")
+        }, {})
+        AccessibilityUtils.performClick("Disconnect", 180 * 1000, {}, {
+            loge("Still connecting? Check log!!")
+        })
+    }
+}
