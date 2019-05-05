@@ -1,0 +1,17 @@
+object PackageUtils {
+    fun loadApps(context: Context): String {
+        val intent = Intent(Intent.ACTION_MAIN, null)
+        intent.addCategory(Intent.CATEGORY_LAUNCHER)
+        val apps = context.packageManager.queryIntentActivities(intent, 0)
+        //for循环遍历ResolveInfo对象获取包名和类名
+        val sb = StringBuilder()
+        for (i in apps.indices) {
+            val info = apps[i]
+            val packageName = info.activityInfo.packageName
+            val cls = info.activityInfo.name
+            val name = info.activityInfo.loadLabel(context.packageManager)
+            sb.append("$name - $packageName - $cls\n")
+        }
+        return sb.toString()
+    }
+}
